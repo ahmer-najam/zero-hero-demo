@@ -1,0 +1,13 @@
+<input type="text" name="fatherName" id="fatherName" #fatherName />
+<input
+  type="text"
+  name="childName"
+  id="childName"
+  [(ngModel)]="this.childName"
+/>
+<p>{{ messageFromChild }}</p>
+<hr />
+<app-child-demo
+  [childName]="this.childName"
+  (messageEmitter)="receiveData($event)"
+></app-child-demo>
