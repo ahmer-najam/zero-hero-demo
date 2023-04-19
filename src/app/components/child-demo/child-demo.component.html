@@ -1,0 +1,9 @@
+<h1>Child Compo</h1>
+<p>{{ this.childName }}</p>
+<input
+  type="text"
+  id="messageToParent"
+  name="messageToParent"
+  [(ngModel)]="this.messageToParent"
+  (change)="sendMessageToParent($event)"
+/>
